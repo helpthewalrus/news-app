@@ -1,7 +1,8 @@
 import { MDCSelect } from "@material/select";
 
-import { fetchSources } from "../../services/index";
+import { fetchSources, fetchNews } from "../../services/index";
 import { NewsSourcesList } from "../NewsSourcesList/index";
+import { NewsList } from "../NewsList/index";
 import { NEWS_SOURCES_CLASSES } from "../../constants/constants";
 
 export class AppComponent {
@@ -17,7 +18,10 @@ export class AppComponent {
     select.listen("MDCSelect:change", this.selectSourceHandler);
   };
 
-  selectSourceHandler = ({ detail: { value } }) => {
-    console.log(value);
+  selectSourceHandler = async ({ detail: { value } }) => {
+    const news = await fetchNews(value);
+
+    const newsList = new NewsList(news);
+    newsList.extractArticles();
   };
 }
