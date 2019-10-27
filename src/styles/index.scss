@@ -4,9 +4,10 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/button/mdc-button";
 
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
 @import "@material/select/mdc-select";
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/icon-button/mdc-icon-button";
 
 .header-wrapper {
   padding: 1.5rem;
@@ -16,6 +17,11 @@
 h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+}
+
+.demo-width-class {
+  width: 30rem;
+  margin: 0 auto;
 }
 
 .central-wrapper {

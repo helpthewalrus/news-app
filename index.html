@@ -12,21 +12,20 @@
     <header class="header-wrapper">
       <h1>Search news</h1>
 
-      <div class="mdc-select">
+      <div class="mdc-select demo-width-class sources-wrapper">
+        <input type="hidden" name="enhanced-select" />
         <i class="mdc-select__dropdown-icon"></i>
-        <select class="mdc-select__native-control">
-          <option value="" disabled selected></option>
-          <option value="European channel">
-            European channel
-          </option>
-          <option value="BBC">
-            BBC
-          </option>
-          <option value="Euronews">
-            Euronews
-          </option>
-        </select>
-        <label class="mdc-floating-label">Choose news agency</label>
+        <div class="mdc-select__selected-text"></div>
+        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+          <ul class="mdc-list sources-list">
+            <li
+              class="mdc-list-item mdc-list-item--selected"
+              data-value=""
+              aria-selected="true"
+            ></li>
+          </ul>
+        </div>
+        <span class="mdc-floating-label">Choose news agency</span>
         <div class="mdc-line-ripple"></div>
       </div>
     </header>
