@@ -6,9 +6,165 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="app.bundle.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   </head>
   <body>
-    <h1>My App</h1>
+    <header class="header-wrapper">
+      <h1>Search news</h1>
+
+      <div class="mdc-select">
+        <i class="mdc-select__dropdown-icon"></i>
+        <select class="mdc-select__native-control">
+          <option value="" disabled selected></option>
+          <option value="European channel">
+            European channel
+          </option>
+          <option value="BBC">
+            BBC
+          </option>
+          <option value="Euronews">
+            Euronews
+          </option>
+        </select>
+        <label class="mdc-floating-label">Choose news agency</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="central-wrapper">
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card demo-card my-card-content">
+                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                  <div
+                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
+                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
+                  ></div>
+                  <div class="demo-card__primary">
+                    <h2
+                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
+                    >
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
+                    </h2>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
+                    >
+                      by Kurt Wagner
+                    </h3>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
+                    >
+                      2019-10-27T15:13:58Z
+                    </h3>
+                  </div>
+                  <div
+                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
+                    esse fuga labore earum totam architecto doloribus deserunt quis?
+                  </div>
+                </div>
+                <div class="mdc-card__actions">
+                  <div class="mdc-card__action-buttons">
+                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card demo-card my-card-content">
+                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                  <div
+                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
+                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
+                  ></div>
+                  <div class="demo-card__primary">
+                    <h2
+                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
+                    >
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
+                    </h2>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
+                    >
+                      by Kurt Wagner
+                    </h3>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
+                    >
+                      2019-10-27T15:13:58Z
+                    </h3>
+                  </div>
+                  <div
+                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
+                    esse fuga labore earum totam architecto doloribus deserunt quis?
+                  </div>
+                </div>
+                <div class="mdc-card__actions">
+                  <div class="mdc-card__action-buttons">
+                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdc-layout-grid__cell">
+              <div class="mdc-card demo-card my-card-content">
+                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                  <div
+                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
+                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
+                  ></div>
+                  <div class="demo-card__primary">
+                    <h2
+                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
+                    >
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
+                    </h2>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
+                    >
+                      by Kurt Wagner
+                    </h3>
+                    <h3
+                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
+                    >
+                      2019-10-27T15:13:58Z
+                    </h3>
+                  </div>
+                  <div
+                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
+                    esse fuga labore earum totam architecto doloribus deserunt quis?
+                  </div>
+                </div>
+                <div class="mdc-card__actions">
+                  <div class="mdc-card__action-buttons">
+                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Powered by
+        <a href="https://newsapi.org" target="_blank">
+          newsapi.org
+        </a>
+      </p>
+    </footer>
+
     <script src="app.bundle.js" async></script>
   </body>
 </html>

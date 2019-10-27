@@ -1,0 +1,48 @@
+@import "./reset.scss";
+
+@import "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/button/mdc-button";
+
+@import "@material/select/mdc-select";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+
+.header-wrapper {
+  padding: 1.5rem;
+  height: 15rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.central-wrapper {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.my-card-content {
+  padding: 1.6rem;
+
+  .news-image,
+  .news-title,
+  .news-author,
+  .demo-card__primary,
+  .news-description {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .news-description {
+    font-size: 1.6rem;
+  }
+}
