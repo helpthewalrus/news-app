@@ -9,148 +9,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   </head>
   <body>
-    <header class="header-wrapper">
-      <h1>Search news</h1>
-
-      <div class="mdc-select demo-width-class sources-wrapper">
-        <input type="hidden" name="enhanced-select" />
-        <i class="mdc-select__dropdown-icon"></i>
-        <div class="mdc-select__selected-text"></div>
-        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-          <ul class="mdc-list sources-list">
-            <li
-              class="mdc-list-item mdc-list-item--selected"
-              data-value=""
-              aria-selected="true"
-            ></li>
-          </ul>
+    <header class="header-wrapper mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <h1 class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          Search news
+        </h1>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-select sources-wrapper">
+          <input type="hidden" name="enhanced-select" />
+          <i class="mdc-select__dropdown-icon"></i>
+          <div class="mdc-select__selected-text"></div>
+          <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+            <ul class="mdc-list sources-list">
+              <li
+                class="mdc-list-item mdc-list-item--selected"
+                data-value=""
+                aria-selected="true"
+              ></li>
+            </ul>
+          </div>
+          <span class="mdc-floating-label">Choose news agency</span>
+          <div class="mdc-line-ripple"></div>
         </div>
-        <span class="mdc-floating-label">Choose news agency</span>
-        <div class="mdc-line-ripple"></div>
       </div>
     </header>
 
     <main>
       <div class="central-wrapper">
         <div class="mdc-layout-grid">
-          <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell">
-              <div class="mdc-card demo-card my-card-content">
-                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
-                  <div
-                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
-                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
-                  ></div>
-                  <div class="demo-card__primary">
-                    <h2
-                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
-                    >
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
-                    </h2>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
-                    >
-                      by Kurt Wagner
-                    </h3>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
-                    >
-                      2019-10-27T15:13:58Z
-                    </h3>
-                  </div>
-                  <div
-                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
-                    esse fuga labore earum totam architecto doloribus deserunt quis?
-                  </div>
-                </div>
-                <div class="mdc-card__actions">
-                  <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mdc-layout-grid__cell">
-              <div class="mdc-card demo-card my-card-content">
-                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
-                  <div
-                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
-                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
-                  ></div>
-                  <div class="demo-card__primary">
-                    <h2
-                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
-                    >
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
-                    </h2>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
-                    >
-                      by Kurt Wagner
-                    </h3>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
-                    >
-                      2019-10-27T15:13:58Z
-                    </h3>
-                  </div>
-                  <div
-                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
-                    esse fuga labore earum totam architecto doloribus deserunt quis?
-                  </div>
-                </div>
-                <div class="mdc-card__actions">
-                  <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mdc-layout-grid__cell">
-              <div class="mdc-card demo-card my-card-content">
-                <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
-                  <div
-                    class="mdc-card__media mdc-card__media--16-9 demo-card__media news-image"
-                    style='background-image: url("https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg");'
-                  ></div>
-                  <div class="demo-card__primary">
-                    <h2
-                      class="demo-card__title mdc-typography mdc-typography--headline6 news-title"
-                    >
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, fugit!
-                    </h2>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-author"
-                    >
-                      by Kurt Wagner
-                    </h3>
-                    <h3
-                      class="demo-card__subtitle mdc-typography mdc-typography--subtitle2 news-date"
-                    >
-                      2019-10-27T15:13:58Z
-                    </h3>
-                  </div>
-                  <div
-                    class="demo-card__secondary mdc-typography mdc-typography--body2 news-description"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias blanditiis cumque
-                    esse fuga labore earum totam architecto doloribus deserunt quis?
-                  </div>
-                </div>
-                <div class="mdc-card__actions">
-                  <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-button--outlined read-button">Read more</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="mdc-layout-grid__inner news-grid-wrapper"></div>
         </div>
       </div>
     </main>

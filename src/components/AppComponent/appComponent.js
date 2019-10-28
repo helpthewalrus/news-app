@@ -19,9 +19,9 @@ export class AppComponent {
   };
 
   selectSourceHandler = async ({ detail: { value } }) => {
-    const news = await fetchNews(value);
+    const { articles } = await fetchNews(value);
 
-    const newsList = new NewsList(news);
-    newsList.extractArticles();
+    const newsList = new NewsList(articles);
+    newsList.renderNews();
   };
 }
