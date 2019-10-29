@@ -1,51 +1,12 @@
 @import "./reset.scss";
+@import "./header.scss";
+@import "./main.scss";
+@import "./footer.scss";
 
-@import "@material/card/mdc-card";
 @import "@material/layout-grid/mdc-layout-grid";
-@import "@material/button/mdc-button";
-
 @import "@material/list/mdc-list";
 @import "@material/menu-surface/mdc-menu-surface";
-@import "@material/menu/mdc-menu";
 @import "@material/select/mdc-select";
-
-body {
-  background-color: #fafafa;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header-wrapper {
-  padding: 1.5rem;
-  height: 15rem;
-  max-width: 96rem;
-}
-
-h1 {
-  margin-bottom: 1.5rem;
-  align-self: center;
-
-  text-align: center;
-  font-size: 3.2rem;
-}
-
-.sources-wrapper {
-  @include mdc-select-container-fill-color(#e0bb20);
-  @include mdc-select-label-color(#000000);
-  @include mdc-select-bottom-line-color(#000000);
-  @include mdc-select-focused-label-color(#841818);
-  @include mdc-select-focused-bottom-line-color(#841818);
-  @include mdc-select-hover-bottom-line-color(#841818);
-  @include mdc-select-shape-radius(0, false);
-
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-
-  span,
-  div {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
-}
 
 .sources-list {
   li {
@@ -54,48 +15,6 @@ h1 {
 }
 
 .central-wrapper {
-  max-width: 96rem;
+  max-width: 120rem;
   margin: 0 auto;
-}
-
-.my-card-content {
-  padding: 1.6rem;
-  @include mdc-card-fill-color(#eae9e9);
-  @include mdc-card-shape-radius(0, false);
-
-  .news-image,
-  .news-info,
-  .news-title,
-  .news-author,
-  .news-date {
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  .news-description {
-    font-size: 1.6rem;
-  }
-
-  .read-button {
-    @include mdc-button-container-fill-color(#2b2b28);
-    @include mdc-button-shape-radius(0, false);
-  }
-}
-
-main {
-  margin-bottom: 7rem;
-}
-
-footer {
-  margin-bottom: 3rem;
-
-  text-align: center;
-  font-size: 1.6rem;
 }

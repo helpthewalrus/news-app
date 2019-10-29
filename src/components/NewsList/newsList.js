@@ -6,6 +6,9 @@ export class NewsList {
     this.news = news;
   }
 
+  /**
+   * Create grid layout with all news cards fetched data
+   */
   renderNews = () => {
     const cardsWrapperElement = document.querySelector(`.${NEWS_CLASSES.NEWS_CARDS_WRAPPER}`);
     cardsWrapperElement.innerHTML = "";

@@ -1,9 +1,6 @@
-const API_KEY = "1e394c8156d94695ac5120e079d9873a";
+const API_KEY = "e682b8fd4991417f802ba47331749d12";
 const URL_SOURCES = "https://newsapi.org/v1/sources";
 const URL_ARTICLES = "https://newsapi.org/v1/articles";
-
-export const NO_IMAGE_FOUND =
-  "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png";
 
 const SOURCES_SELECT_CLASS = "sources-wrapper";
 const SOURCES_UL_CLASS = "sources-list";
@@ -27,6 +24,9 @@ const NEWS_ACTIONS_BUTTONS = "mdc-card__action-buttons";
 const NEWS_BUTTON = "mdc-button";
 const NEWS_BUTTON_RAISED = "mdc-button--raised";
 const NEWS_READ_BUTTON = "read-button";
+
+export const NO_IMAGE_FOUND =
+  "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png";
 
 export const CONSTANTS_FOR_SEARCH = {
   API_KEY,

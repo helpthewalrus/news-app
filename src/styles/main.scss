@@ -1,0 +1,53 @@
+@import "@material/card/mdc-card";
+@import "@material/button/mdc-button";
+
+.main-wrapper {
+  flex: 1 0 auto;
+
+  margin-bottom: 3rem;
+
+  .my-card-content {
+    position: relative;
+
+    padding: 1.6rem;
+    @include mdc-card-fill-color(#eae9e9);
+    @include mdc-card-shape-radius(0, false);
+
+    .news-image,
+    .news-info,
+    .news-title,
+    .news-author,
+    .news-date,
+    .news-description {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    .news-description {
+      font-size: 1.6rem;
+    }
+
+    .read-button {
+      @include mdc-button-container-fill-color(#420000);
+      @include mdc-button-shape-radius(0, false);
+
+      position: absolute;
+      bottom: 1.6rem;
+      left: 1.6rem;
+
+      font-size: 1rem;
+
+      &:hover {
+        @include mdc-button-container-fill-color(#d4d7dd);
+        color: #420000;
+      }
+    }
+  }
+}

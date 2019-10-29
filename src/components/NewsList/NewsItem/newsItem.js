@@ -5,6 +5,9 @@ export class NewsItem {
     this.newsItem = newsItem;
   }
 
+  /**
+   * Create news card layout according to data in newsItem
+   */
   render() {
     const {
       NEWS_CARD_CELL,
@@ -61,13 +64,13 @@ export class NewsItem {
       <div class="${NEWS_ACTIONS}">
         <div class="${NEWS_ACTIONS_BUTTONS}">
           <a class="${NEWS_BUTTON} ${NEWS_BUTTON_RAISED} ${NEWS_READ_BUTTON}"
-             href="${this.newsItem.url}"
-             target="_blank">
+            href="${this.newsItem.url}"
+            target="_blank">
             Read more
           </a>
         </div>
       </div>
-   `;
+      `;
 
     newsElement.classList.add(NEWS_CARD_CELL, NEWS_CARD, NEWS_CARD_CONTENT);
     return newsElement;
