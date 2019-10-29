@@ -35,7 +35,7 @@
     }
 
     .read-button {
-      @include mdc-button-container-fill-color(#420000);
+      @include mdc-button-container-fill-color(#2e0863);
       @include mdc-button-shape-radius(0, false);
 
       position: absolute;
@@ -46,7 +46,7 @@
 
       &:hover {
         @include mdc-button-container-fill-color(#d4d7dd);
-        color: #420000;
+        color: #7614ff;
       }
     }
   }
