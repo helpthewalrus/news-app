@@ -9,14 +9,14 @@
 
     text-align: center;
     font-size: 3.2rem;
-    color: #420000;
+    color: #2e0863;
   }
 
   .sources-wrapper {
     @include mdc-select-container-fill-color(#d4d7dd);
-    @include mdc-select-label-color(#420000);
-    @include mdc-select-focused-label-color(#420000);
-    @include mdc-select-shape-radius(0, false);
+    @include mdc-select-label-color(#7614ff);
+    @include mdc-select-focused-label-color(#7614ff);
+    @include mdc-select-shape-radius(5, false);
 
     span,
     div {
