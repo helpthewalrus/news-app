@@ -11,7 +11,7 @@
 
     padding: 1.6rem;
     @include mdc-card-fill-color(#eae9e9);
-    @include mdc-card-shape-radius(4, false);
+    @include mdc-card-shape-radius(5, false);
 
     .news-image,
     .news-info,
@@ -36,7 +36,7 @@
 
     .read-button {
       @include mdc-button-container-fill-color(#2e0863);
-      @include mdc-button-shape-radius(4, false);
+      @include mdc-button-shape-radius(5, false);
 
       position: absolute;
       bottom: 1.6rem;
