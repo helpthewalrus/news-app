@@ -1,2 +1,1 @@
-export { fetchSources } from "./fetchSources";
-export { fetchNews } from "./fetchNews";
+export { FetchInfo } from "./fetchInfo";
