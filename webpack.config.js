@@ -1,12 +1,15 @@
-const path = require("path")
-const autoprefixer = require("autoprefixer")
+const path = require("path");
+const autoprefixer = require("autoprefixer");
 
 module.exports = [
   {
-    entry: ["@babel/polyfill", "./src/index.js"],
+    entry: {
+      app: ["@babel/polyfill", "./src/index.js"]
+    },
     output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "app.bundle.js"
+      filename: "[name].bundle.js",
+      chunkFilename: "[name].bundle.js",
+      path: path.resolve(__dirname, "dist")
     },
     module: {
       rules: [
@@ -53,4 +56,4 @@ module.exports = [
       ]
     }
   }
-]
+];
