@@ -1,13 +1,15 @@
-import { CONSTANTS_FOR_SEARCH } from "../constants/constants";
+import { RequestFactory } from "./requestFactory";
 
 export class FetchInfo {
   /**
    * Fetch info accroding to provided url
    */
   static fetchInfo = async (...urlParams) => {
+    const [, , method] = urlParams;
     const url = FetchInfo.buildUrl(urlParams);
 
-    const fetchedInfo = await fetch(url);
+    const requestFactory = new RequestFactory().create(method);
+    const fetchedInfo = await fetch(url, requestFactory);
     const info = await fetchedInfo.json();
     return info;
   };
@@ -16,8 +18,7 @@ export class FetchInfo {
    * Create search url according to input parameters
    */
   static buildUrl = urlParams => {
-    const baseUrl = urlParams[0];
-    const queryUrl = urlParams[1];
+    const [baseUrl, queryUrl] = urlParams;
     const buildURLQuery = queryParams =>
       Object.entries(queryParams)
         .map(pair => pair.join("="))
