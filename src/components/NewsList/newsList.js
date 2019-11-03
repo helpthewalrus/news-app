@@ -12,11 +12,14 @@ export class NewsList {
   renderNews = () => {
     const cardsWrapperElement = document.querySelector(`.${NEWS_CLASSES.NEWS_CARDS_WRAPPER}`);
     cardsWrapperElement.innerHTML = "";
+    const fragment = document.createDocumentFragment();
 
-    this.news.map(newsItem => {
+    this.news.forEach(newsItem => {
       const resultNewsItem = new NewsItem(newsItem);
       const newsItemForRender = resultNewsItem.render();
-      cardsWrapperElement.appendChild(newsItemForRender);
+      fragment.appendChild(newsItemForRender);
     });
+
+    cardsWrapperElement.appendChild(fragment);
   };
 }
