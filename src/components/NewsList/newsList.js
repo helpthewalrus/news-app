@@ -1,5 +1,5 @@
 import { NewsItem } from "./NewsItem/index";
-import { NEWS_CLASSES } from "../../constants/constants";
+import { NEWS_CARDS_WRAPPER } from "../../constants/constants";
 
 export class NewsList {
   constructor(news) {
@@ -10,13 +10,13 @@ export class NewsList {
    * Create grid layout with all news cards fetched data
    */
   renderNews = () => {
-    const cardsWrapperElement = document.querySelector(`.${NEWS_CLASSES.NEWS_CARDS_WRAPPER}`);
+    const cardsWrapperElement = document.querySelector(`.${NEWS_CARDS_WRAPPER}`);
     cardsWrapperElement.innerHTML = "";
     const fragment = document.createDocumentFragment();
 
     this.news.forEach(newsItem => {
-      const resultNewsItem = new NewsItem(newsItem);
-      const newsItemForRender = resultNewsItem.render();
+      const resultNewsItem = new NewsItem();
+      const newsItemForRender = resultNewsItem.render(newsItem);
       fragment.appendChild(newsItemForRender);
     });
 

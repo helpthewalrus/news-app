@@ -1,4 +1,8 @@
-import { NEWS_CLASSES, ERROR_CLASSES } from "../constants/constants";
+import {
+  NEWS_CARDS_WRAPPER,
+  ERROR_MESSAGE,
+  ERROR_MESSAGE_GRID_LAYOUT
+} from "../constants/constants";
 
 /**
  * Render text of the error
@@ -6,8 +10,6 @@ import { NEWS_CLASSES, ERROR_CLASSES } from "../constants/constants";
  * @param errorObject - error object used to depict error message
  */
 export const renderError = errorObject => {
-  const { NEWS_CARDS_WRAPPER } = NEWS_CLASSES;
-  const { ERROR_MESSAGE, ERROR_MESSAGE_GRID_LAYOUT } = ERROR_CLASSES;
   const errorText = errorObject.message;
 
   const inputElement = document.querySelector(`.${NEWS_CARDS_WRAPPER}`);
