@@ -25,6 +25,9 @@ const NEWS_BUTTON = "mdc-button";
 const NEWS_BUTTON_RAISED = "mdc-button--raised";
 const NEWS_READ_BUTTON = "read-button";
 
+const ERROR_MESSAGE = "error-message";
+const ERROR_MESSAGE_GRID_LAYOUT = "mdc-layout-grid__cell--span-12";
+
 export const NO_IMAGE_FOUND =
   "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png";
 
@@ -59,4 +62,9 @@ export const NEWS_CLASSES = {
   NEWS_BUTTON,
   NEWS_BUTTON_RAISED,
   NEWS_READ_BUTTON
+};
+
+export const ERROR_CLASSES = {
+  ERROR_MESSAGE,
+  ERROR_MESSAGE_GRID_LAYOUT
 };
