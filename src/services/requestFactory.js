@@ -1,7 +1,7 @@
 import { Request } from "./request";
 
 export class RequestFactory {
-  create(url, requestMethod) {
+  createRequest(url, requestMethod) {
     let request;
     switch (requestMethod) {
       case "GET":
