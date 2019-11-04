@@ -9,6 +9,7 @@ import {
   URL_SOURCES,
   URL_ARTICLES
 } from "../../constants/constants";
+import { urlBuilder } from "../../utils/index";
 
 export class AppComponent {
   currentSource = undefined;
@@ -19,7 +20,8 @@ export class AppComponent {
    */
   init = async () => {
     try {
-      const { sources } = await FetchInfo.fetchInfo(URL_SOURCES, { apiKey: API_KEY }, "GET");
+      const url = urlBuilder(URL_SOURCES, { apiKey: API_KEY });
+      const { sources } = await FetchInfo.fetchInfo(url, "GET");
       if (!sources || !sources.length) throw new Error("No sources found");
 
       const newsSourcesList = new NewsSourcesList();
@@ -40,14 +42,11 @@ export class AppComponent {
       return;
     }
     try {
-      const { articles } = await FetchInfo.fetchInfo(
-        URL_ARTICLES,
-        {
-          source: value,
-          apiKey: API_KEY
-        },
-        "GET"
-      );
+      const url = urlBuilder(URL_ARTICLES, {
+        source: value,
+        apiKey: API_KEY
+      });
+      const { articles } = await FetchInfo.fetchInfo(url, "GET");
       if (!articles || !articles.length) throw new Error("No articles found");
 
       const newsList = new NewsList(articles);

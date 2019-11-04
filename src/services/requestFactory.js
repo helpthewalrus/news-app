@@ -1,24 +1,24 @@
 import { Request } from "./request";
 
 export class RequestFactory {
-  create(requestMethod) {
+  create(url, requestMethod) {
     let request;
     switch (requestMethod) {
       case "GET":
-        request = new Request("GET");
+        request = new Request(url, "GET");
         break;
       case "POST":
-        request = new Request("POST");
+        request = new Request(url, "POST");
         break;
       case "PUT":
-        request = new Request("PUT");
+        request = new Request(url, "PUT");
         break;
       case "DELETE":
-        request = new Request("DELETE");
+        request = new Request(url, "DELETE");
         break;
 
       default:
-        request = new Request("GET");
+        request = new Request(url, "GET");
         break;
     }
     return request;
