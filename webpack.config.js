@@ -1,15 +1,33 @@
 const path = require("path");
 const autoprefixer = require("autoprefixer");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = [
   {
     entry: {
-      app: ["@babel/polyfill", "./src/index.js"]
+      app: "./src/index.js"
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: "News App",
+        template: "index.html"
+      }),
+      new CleanWebpackPlugin()
+    ],
     output: {
       filename: "[name].bundle.js",
       chunkFilename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist")
+    },
+    devtool: "cheap-module-eval-source-map",
+    devServer: {
+      contentBase: path.join(__dirname, "dist"),
+      compress: true,
+      port: 9000,
+      disableHostCheck: false,
+      hot: true,
+      historyApiFallback: true
     },
     module: {
       rules: [
@@ -29,13 +47,7 @@ module.exports = [
         {
           test: /\.scss$/,
           use: [
-            {
-              loader: "file-loader",
-              options: {
-                name: "app.bundle.css"
-              }
-            },
-            { loader: "extract-loader" },
+            { loader: "style-loader" },
             { loader: "css-loader" },
             {
               loader: "postcss-loader",
