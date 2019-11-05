@@ -1,4 +1,4 @@
-export const API_KEY = "e682b8fd4991417f802ba47331749d12";
+export const API_KEY = "9149aea71b2f431a848506c2bdcef446";
 export const URL_SOURCES = "https://newsapi.org/v1/sources";
 export const URL_ARTICLES = "https://newsapi.org/v1/articles";
 
