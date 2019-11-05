@@ -1,5 +1,10 @@
-.error-message {
-  color: red;
-  text-align: center;
-  font-size: 2rem;
+@import "@material/dialog/mdc-dialog";
+@import "@material/button/mdc-button";
+
+.mdc-dialog__surface {
+  .dialog-tite {
+    color: #2e0863;
+    text-align: center;
+    font-size: 1.6rem;
+  }
 }

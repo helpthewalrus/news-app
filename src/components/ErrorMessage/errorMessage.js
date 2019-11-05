@@ -1,4 +1,5 @@
 import { renderError } from "../../utils/index";
+import { MDCDialog } from "@material/dialog";
 
 export class ErrorMessage {
   constructor() {
@@ -11,5 +12,7 @@ export class ErrorMessage {
 
   render(errorObject) {
     renderError(errorObject);
+    const dialog = new MDCDialog(document.querySelector(".mdc-dialog"));
+    dialog.open();
   }
 }

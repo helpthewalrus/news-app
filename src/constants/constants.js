@@ -25,6 +25,17 @@ export const NEWS_BUTTON = "mdc-button";
 export const NEWS_BUTTON_RAISED = "mdc-button--raised";
 export const NEWS_READ_BUTTON = "read-button";
 
+export const MDC_DIALOG = "mdc-dialog";
+export const MDC_DIALOG_CONTAINER = "mdc-dialog__container";
+export const MDC_DIALOG_SURFACE = "mdc-dialog__surface";
+export const MDC_DIALOG_TITLE = "mdc-dialog__title";
+export const DIALOG_TITLE = "dialog-tite";
+export const MY_DIALOG_TITLE = "my-dialog-title";
+export const MDC_DIALOG_ACTIONS = "mdc-dialog__actions";
+export const MDC_DIALOG_BUTTON = "mdc-dialog__button";
+export const MDC_DIALOG_LABEL = "mdc-button__label";
+export const MDC_DIALOG_SCRIM = "mdc-dialog__scrim";
+
 export const ERROR_MESSAGE = "error-message";
 export const ERROR_MESSAGE_GRID_LAYOUT = "mdc-layout-grid__cell--span-12";
 
