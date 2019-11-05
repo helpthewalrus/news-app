@@ -1,4 +1,4 @@
-import { NEWS_SOURCES_CLASSES } from "../../constants/constants";
+import { SOURCES_UL_CLASS, SOURCE_LI_MAT_CLASS } from "../../constants/constants";
 
 export class NewsSourcesList {
   /**
@@ -7,9 +7,8 @@ export class NewsSourcesList {
    * @param sources - array of data about news sources
    */
   render(sources) {
-    const { SOURCES_UL_CLASS, SOURCE_LI_MAT_CLASS } = NEWS_SOURCES_CLASSES;
-
     const selectUl = document.querySelector(`.${SOURCES_UL_CLASS}`);
+    const fragment = document.createDocumentFragment();
 
     sources.forEach(source => {
       const li = document.createElement("li");
@@ -17,7 +16,9 @@ export class NewsSourcesList {
       li.setAttribute("data-value", `${source.id}`);
       li.classList.add(`${SOURCE_LI_MAT_CLASS}`);
 
-      selectUl.appendChild(li);
+      fragment.appendChild(li);
     });
+
+    selectUl.appendChild(fragment);
   }
 }
