@@ -21,11 +21,13 @@ export class AppComponent {
   init = async () => {
     try {
       const url = urlBuilder(URL_SOURCES, { apiKey: API_KEY });
-      const { sources } = await FetchInfo.fetchInfo(url, "GET");
+      const { sources = [] } = await FetchInfo.fetchInfo(url, "GET");
       if (!sources || !sources.length) throw new Error("No sources found");
 
       const newsSourcesList = new NewsSourcesList();
+
       newsSourcesList.render(sources);
+
       const select = new MDCSelect(document.querySelector(`.${SOURCES_SELECT_CLASS}`));
       select.listen("MDCSelect:change", this.handleSourceSelect);
     } catch (errorObject) {
@@ -46,7 +48,7 @@ export class AppComponent {
         source: value,
         apiKey: API_KEY
       });
-      const { articles } = await FetchInfo.fetchInfo(url, "GET");
+      const { articles = [] } = await FetchInfo.fetchInfo(url, "GET");
       if (!articles || !articles.length) throw new Error("No articles found");
 
       const newsList = new NewsList(articles);
