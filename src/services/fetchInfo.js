@@ -9,10 +9,11 @@ export class FetchInfo {
 
     const handler = {
       apply: function(target, thisArg, argumentsList) {
-        console.log(`
-          METHOD: ${argumentsList[1]},
-          URL: ${argumentsList[0]}
-        `);
+        const requestParams = {
+          method: argumentsList[1],
+          url: argumentsList[0]
+        };
+        console.table(requestParams);
         return target(argumentsList[0], argumentsList[1]);
       }
     };
