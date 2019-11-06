@@ -1,0 +1,21 @@
+@import "./reset.scss";
+@import "./header.scss";
+@import "./main.scss";
+@import "./footer.scss";
+@import "../components/ErrorMessage/styles/error.scss";
+
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/select/mdc-select";
+
+.sources-list {
+  li {
+    font-size: 1.4rem;
+  }
+}
+
+.central-wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+}

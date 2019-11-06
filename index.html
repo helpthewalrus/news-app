@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>News App</title>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="central-wrapper mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <h1
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet"
+          >
+            Search news
+          </h1>
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-select sources-wrapper"
+          >
+            <input type="hidden" name="enhanced-select" />
+            <i class="mdc-select__dropdown-icon"></i>
+            <div class="mdc-select__selected-text"></div>
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+              <ul class="mdc-list sources-list">
+                <li
+                  class="mdc-list-item mdc-list-item--selected"
+                  data-value=""
+                  aria-selected="true"
+                ></li>
+              </ul>
+            </div>
+            <span class="mdc-floating-label">Choose news agency</span>
+            <div class="mdc-line-ripple"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-wrapper">
+      <div class="central-wrapper mdc-layout-grid">
+        <div class="mdc-layout-grid__inner news-grid-wrapper"></div>
+      </div>
+    </main>
+
+    <footer class="footer-wrapper">
+      <p>
+        Powered by
+        <a href="https://newsapi.org" target="_blank">
+          newsapi.org
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>

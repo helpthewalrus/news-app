@@ -1,0 +1,27 @@
+@import "@material/select/mdc-select";
+
+.header-wrapper {
+  padding: 1.5rem;
+  height: 15rem;
+
+  h1 {
+    align-self: center;
+
+    text-align: center;
+    font-size: 3.2rem;
+    color: #2e0863;
+  }
+
+  .sources-wrapper {
+    @include mdc-select-container-fill-color(#d4d7dd);
+    @include mdc-select-label-color(#7614ff);
+    @include mdc-select-focused-label-color(#7614ff);
+    @include mdc-select-shape-radius(5, false);
+
+    span,
+    div {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+  }
+}
